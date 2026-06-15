@@ -2,7 +2,7 @@
 
 A Squawka-style football analytics platform covering all 20 Premier League teams across **three seasons (2023/24 – 2025/26)**. Built to answer **"unlucky, or just bad?"** through Expected Goals (xG), and extended into player scouting, transfer analysis and squad comparison.
 
-**Live demo:** _add your Streamlit Cloud URL_
+**Live demo:** [CJO27-pl-analytics-app-abc123.streamlit.app](https://premierleagueanalysis-cjo27.streamlit.app/)
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue) ![Streamlit](https://img.shields.io/badge/Streamlit-app-red) ![Tests](https://img.shields.io/badge/tests-24%20passing-brightgreen) ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-blue) ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
@@ -64,27 +64,6 @@ pytest -q                               # run the test suite
 ```
 
 Each fetch caches to `data/processed/`.
-
----
-
-## Putting it on GitHub & going live
-
-```bash
-# from the project folder
-git init
-git add .
-git commit -m "Premier League analytics dashboard"
-git branch -M main
-git remote add origin https://github.com/<your-username>/pl-analytics.git
-git push -u origin main
-```
-
-Make sure `data/processed/*.parquet` is committed (it is by default) so the
-deployed app has data without re-fetching. Then:
-
-1. Go to [share.streamlit.io](https://share.streamlit.io) and connect your GitHub.
-2. Pick the repo, set the main file to `app.py`, and deploy.
-3. Copy the live URL into the badge/links at the top of this README.
 
 The included GitHub Actions workflow (`.github/workflows/tests.yml`) runs the
 test suite automatically on every push.
